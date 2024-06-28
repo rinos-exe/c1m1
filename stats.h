@@ -21,20 +21,105 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+int find_mean(unsigned char t[], int a);
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Finds the mean of an array
  *
- * <Add Extended Description Here>
+ * This function takes in an array "t[]" of size "a" 
+ * and finds the mean value of the array. It returns
+ * the mean value
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param t[] This is the array to be processed
+ * @param a This is the size for the array
  *
- * @return <Add Return Informaiton here>
+ * @return The mean value of the array
  */
 
+int find_median(unsigned char t[], int a);
+
+/**
+ * @brief Finds the median of an array
+ *
+ * This function takes in an array "t[]" of size "a" and finds
+ * the median value of the array. It retuens the median value 
+ * of the array.
+ *
+ * @param t[] This is the array to be processed
+ * @param a This is the size for the array
+ *
+ * @return The median value of the array
+ */
+
+int find_maximum(unsigned char t[], int a);
+
+/**
+ * @brief Finds the maximum value of an array
+ *
+ * This function takes in an array "t[]" of size "a" and finds
+ * the maximum value in an array. It returns the maximum value
+ * calculated.
+ *
+ * @param t[] This is the array to be processed
+ * @param a This is the size for the array
+ *
+ * @return The maximum value of the array
+ */
+
+int find_minimum(unsigned char t[], int a);
+
+/**
+ * @brief Finds the minimum value of an array
+ *
+ * This function takes in an array "t[]" of size "a" and
+ * finds the minimum value of the array. It returns the Minimum value.
+ *
+ * @param t[] This is the array to be processed
+ * @param a This is the size for the array
+ *
+ * @return The minimum value of the array
+ */
+
+void sort_array(unsigned char t[], int a);
+
+/**
+ * @brief Sorts an array in descending order
+ *
+ * This function takes in an array "t[]" of size "a" and 
+ * sorts the array in descending order.
+ * It doesn't return anything.
+ *
+ * @param t[] This is the array to be processed
+ * @param a This is the size for the array
+ *
+ * @return None
+ */
+
+unsigned char print_array(unsigned char t[]);
+
+/**
+ * @brief Prints the array
+ *
+ * This function takes in an array "t[]" and displays it
+ *
+ * @param t[] This is the array to be processed
+ *
+ * @return The entire array
+ */
+
+void print_statistics(unsigned char t[], int a); 
+
+/**
+ * @brief Finds the mean of an array
+ *
+ * This function takes in an array "t[]" of size "a" and displays 
+ * the calculated data. All the other functions are called in this function.
+ * It doesnt return any data.
+ *
+ * @param t[] This is the array to be processed
+ * @param a This is the size for the array
+ *
+ * @return None
+ */
 
 #endif /* __STATS_H__ */

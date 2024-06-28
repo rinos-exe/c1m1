@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here> 
+ * @file stats.c 
+ * @brief To find array statistics of a given array 
  *
- * <Add Extended Description Here>
+ * This is a C program to find mean, median, maximum value, minimum value, descending sort of a given array "test".
  *
- * @author <Add FirsName LastName>
- * @date <Add date>
+ * @author Rino Shajan
+ * @date 28/06/2024
  *
  */
 
@@ -27,6 +27,17 @@
 /* Size of the Data Set */
 #define SIZE (40)
 
+
+
+
+int find_mean(unsigned char t[], int a);
+int find_median(unsigned char t[], int a);
+int find_maximum(unsigned char t[], int a);
+int find_minimum(unsigned char t[], int a);
+void sort_array(unsigned char t[], int a);
+unsigned char print_array(unsigned char t[]);
+void print_statistics(unsigned char t[], int a);
+
 int main() {
 
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
@@ -34,6 +45,9 @@ int main() {
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
+  int i, j, a, t;
+  int mean, median;
+  int max, min;
 
 
 
@@ -42,4 +56,35 @@ int main() {
 
 }
 
-/* Add other Implementation File Code Here */
+  float find_mean(unsigned char t[], int a)
+  {
+
+  }
+
+  float find_median(unsigned char t[], int a)
+  {
+
+  }
+
+  int find_maximum(unsigned char t[], int a)
+  {
+
+  }
+
+  int find_minimum(unsigned char t[], int a)
+  {
+
+  }
+
+  void sort_array(unsigned char t[], int a)
+  {
+
+  }
+
+void print_statistics(unsigned char t[], int a)
+{
+ 
+}
+
+
+
