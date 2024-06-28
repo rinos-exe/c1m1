@@ -48,43 +48,125 @@ int main() {
   int i, j, a, t;
   int mean, median;
   int max, min;
+  
+  print_statistics(test, SIZE);
 
+  sort_array(t, a);
+  printf("Sorted order of arrays is: \n");
+  for (i = 0 ; i < SIZE ; i++)
+  {
+    printf("%d", test[i]);
+  }
+  printf("\n");
 
-
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
-
+  return 0;
 }
 
   float find_mean(unsigned char t[], int a)
   {
+        int sum = 0;
+    for (i = 0 ; i < a ; i++)
+    {
+      sum = sum + t[i];
+    }
+    mean = sum/a;
 
+    return mean;
   }
 
   float find_median(unsigned char t[], int a)
   {
+      for (i = 0 ; i < a - 1 ; i++)
+    {
+      if (t[i] < t[i+1])
+      {
+        int temp = t[i];
+        t[i] = t[i+1];
+        t[i+1] = temp;
+      }
+    }
+    int n = a / 2;
+    int n1 = a/2 + 1;
+    if (a % 2 == 0)
+    {
+      median = (t[n] + t[n1])/2;
+    }
+    else
+    {
+      median = t[n];
+    }
+
+    return median;
 
   }
 
   int find_maximum(unsigned char t[], int a)
   {
+      for (i = 0 ; i < a - 1 ; i++)
+    {
+      if (t[i] < t[i+1])
+      {
+        int temp = t[i];
+        t[i] = t[i+1];
+        t[i+1] = temp;
+      }
+    }
+    max = t[0];
 
+    return max;
   }
 
   int find_minimum(unsigned char t[], int a)
   {
+      for (i = 0 ; i < a - 1 ; i++)
+    {
+      if (t[i] < t[i+1])
+      {
+        int temp = t[i];
+        t[i] = t[i+1];
+        t[i+1] = temp;
+      }
+    }
+    int l = a - 1;
+    min = t[l];
 
+    return min;
   }
 
   void sort_array(unsigned char t[], int a)
   {
+       for (i = 0 ; i < a ; i++)
+    {
+      for (j = 0; i < a -i -1 ; j++)
+      {
+        if (t[j] < t[j + 1])
+        {
+          int temp = t[j];
+          t[j] = t[j + 1];
+          t[j + 1] = temp;
+        }
+      }
+    }
 
   }
 
-void print_statistics(unsigned char t[], int a)
-{
- 
-}
+  unsigned char print_array(unsigned char t[])
+  {
+    return t;
+  }
+
+  void print_statistics(unsigned char t[], int a)
+  {
+    int mean = find_mean(t, a);
+    int median = find_median(t, a);
+    int max = find_maximum(t, a);
+    int min = find_minimum(t, a);
+
+    printf("Mean: %.2f\n", mean);
+    printf("Median: %.2f\n", median);
+    printf("Maximum: %d\n", max);
+    printf("Minimum: %d\n", min);
+  }
 
 
 
